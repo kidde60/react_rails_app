@@ -4,12 +4,16 @@ import "./controllers"
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-function App() {
-  return (<h1>Hello World! React rails app</h1>);
-}
+import {BrowserRouter }from 'react-router-dom'
+import { Provider } from 'react-redux';
+import App from './app'
+import store from './reducers/configureStore'
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root'),
+  <BrowserRouter>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
+  document.getElementById('root')
 );
