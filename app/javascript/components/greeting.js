@@ -6,6 +6,7 @@ const Greeting = () => {
 
   return (
     <div>
+      <h1>Refresh the page to change greetings</h1>
       <h2>{message}</h2>
     </div>
   );
